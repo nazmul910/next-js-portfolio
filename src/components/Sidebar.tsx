@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import {sidebarStyles as s } from "../../public/dummyStyles";
+import { TypingAnimation } from "./ui/typing-animation";
 
 
 type IconProps = SVGProps<SVGSVGElement>;
@@ -139,8 +140,18 @@ export default function Sidebar(): React.ReactElement {
                     <div className={s.mobileName}>
                         MD.Nazmul Hasan
                     </div>
+                    <TypingAnimation words={["Full Stack Developer", "Problem Solver", "Content Creator"]} loop />
                 </div>
             </div>
+            <nav id="desktop-sidebar" className={s.navContainer} aria-label="Primary">
+              <ul className={s.navList}>
+                {navItems.map(({href,label,Icon})=>(
+                  <li key={href}>
+                    <Link href={href} className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}/>
+                  </li>
+                ))}
+              </ul>
+            </nav>
         </div>
     </div>
     

@@ -143,7 +143,10 @@ export default function Sidebar(): React.ReactElement {
                     <TypingAnimation words={["Full Stack Developer", "Problem Solver", "Content Creator"]} loop />
                 </div>
             </div>
-            <nav id="desktop-sidebar" className={s.navContainer} aria-label="Primary">
+
+        </div>
+    </div>
+                <nav id="desktop-sidebar" className={s.navContainer} aria-label="Primary">
               <ul className={s.navList}>
                 {navItems.map(({href,label,Icon})=>(
                   <li key={href}>
@@ -170,9 +173,6 @@ export default function Sidebar(): React.ReactElement {
                 }
               </ul>
             </nav>
-        </div>
-    </div>
-    
     </>
   );
 }

@@ -147,7 +147,9 @@ export default function Sidebar(): React.ReactElement {
               <ul className={s.navList}>
                 {navItems.map(({href,label,Icon})=>(
                   <li key={href}>
-                    <Link href={href} className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}/>
+                    <Link href={href} className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`} aria-current={pathname === href ? "page" : undefined }/>
+                    <Icon className={s.navIcon} />
+                    <span className={s.navLabel}>{label}</span>
                   </li>
                 ))}
               </ul>

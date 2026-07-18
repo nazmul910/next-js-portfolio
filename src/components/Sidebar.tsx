@@ -153,6 +153,22 @@ export default function Sidebar(): React.ReactElement {
                   </li>
                 ))}
               </ul>
+              <div className={s.connectLabel}>
+                Connect
+              </div>
+              <ul className={s.socialList}>
+                {
+                  socials.map((soc) =>
+                  <li key={soc.href}>
+                    <a href={soc.href} className={s.socialItem} title={soc.label} rel="noopener noreferrer" target="_blank">
+                      <svg className={s.socialIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d={soc.svgPath} />  
+                      </svg>
+                      <span className={s.socialLabel}>{soc.label}</span>
+                    </a>
+                  </li>)
+                }
+              </ul>
             </nav>
         </div>
     </div>

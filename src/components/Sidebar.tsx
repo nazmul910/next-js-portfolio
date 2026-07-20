@@ -261,45 +261,173 @@ export default function Sidebar(): React.ReactElement {
         </div>
       </div>
       <div className={s.mobileSpacer}></div>
-      <nav id="desktop-sidebar" className={s.navContainer} aria-label="Primary">
-        <ul className={s.navList}>
-          {navItems.map(({ href, label, Icon }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}
-                aria-current={pathname === href ? "page" : undefined}
-              />
-              <Icon className={s.navIcon} />
-              <span className={s.navLabel}>{label}</span>
-            </li>
-          ))}
-        </ul>
-        <div className={s.connectLabel}>Connect</div>
-        <ul className={s.socialList}>
-          {socials.map((soc) => (
-            <li key={soc.href}>
-              <a
-                href={soc.href}
-                className={s.socialItem}
-                title={soc.label}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <svg
-                  className={s.socialIcon}
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
+      <aside className={s.desktopSidebar} aria-labelledby="desktop-sidebar">
+        <div className={s.desktopAvatarContainer}>
+          <div className={s.desktopAvatar}>
+            <Image
+              src="/hexagon.png"
+              alt="Nazmul hasan"
+              width={48}
+              height={48}
+              className={s.desktopAvatarImage}
+              priority
+            />
+          </div>
+          <div className={s.desktopTyping}>
+            <TypingAnimation
+              className={s.desktopTyping}
+              words={[
+                "Full Stack Developer",
+                "Problem Solver",
+                "Content Creator",
+              ]}
+              loop
+            />
+          </div>
+        </div>
+
+        <nav
+          id="desktop-sidebar"
+          className={s.navContainer}
+          aria-label="Primary"
+        >
+          <ul className={s.navList}>
+            {navItems.map(({ href, label, Icon }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}
+                  aria-current={pathname === href ? "page" : undefined}
+                />
+                <Icon className={s.navIcon} />
+                <span className={s.navLabel}>{label}</span>
+              </li>
+            ))}
+          </ul>
+          <div className={s.connectLabel}>Connect</div>
+          <ul className={s.socialList}>
+            {socials.map((soc) => (
+              <li key={soc.href}>
+                <a
+                  href={soc.href}
+                  className={s.socialItem}
+                  title={soc.label}
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  <path d={soc.svgPath} />
-                </svg>
-                <span className={s.socialLabel}>{soc.label}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+                  <svg
+                    className={s.socialIcon}
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d={soc.svgPath} />
+                  </svg>
+                  <span className={s.socialLabel}>{soc.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+
+      <div
+        className={`${s.mobileOverlay} ${isMobileMenuOpen ? s.mobileOverlayBgVisible : s.mobileOverlayHidden}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <div
+          className={`${s.mobileSidebar} ${isMobileMenuOpen ? s.mobileSidebarVisible : s.mobileSidebarHidden}`}
+        />
+
+        <div className={s.mobileSidebarHeader}>
+          <div className={s.mobileHeaderInner}>
+            <div className={s.mobileAvatarContainer}>
+              <div className={s.mobileAvatar}>
+                <Image
+                  src="/hexagon.png"
+                  alt="Nazmul hasan"
+                  width={40}
+                  height={40}
+                  className={s.mobileAvatarImage}
+                  priority
+                />
+              </div>
+              <div>
+                <div className={s.mobileName}>Nazmul hasan</div>
+                <TypingAnimation
+                  className={s.mobileName}
+                  words={[
+                    "Full Stack Developer",
+                    "Problem Solver",
+                    "Content Creator",
+                  ]}
+                  loop
+                />
+              </div>
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={s.mobileCloseButton}
+              aria-label="Close menu"
+            >
+              <CloseIcon className={s.mobileCloseIcon} />
+            </button>
+          </div>
+        </div>
+        <div className={s.mobileContent}>
+          <nav className="mb-8">
+            <div className={s.mobileSectionLabel}>Home</div>
+            <ul className={s.mobileNavList}>
+              {navItems.map(({ href, label, Icon }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`${s.mobileNavItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}
+                    aria-current={pathname === href ? "page" : undefined}
+                  >
+                    <Icon className={s.mobileNavIcon} />
+                    <span className={s.mobileNavLabel}>{label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className={s.mobileSocialSection}>
+            <div className={s.mobileSectionLabel}>Connect</div>
+            <div className={s.mobileSocialList}>
+              {socials.map((soc) => (
+                <Link
+                  key={soc.label}
+                  href={soc.href}
+                  className={s.mobileSocialItem}
+                  title={soc.label}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    className={s.mobileSocialIcon}
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d={soc.svgPath} />
+                  </svg>
+                  <span className={s.mobileSocialText}>{soc.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className={s.mobileFooter}>
+          <div className={s.mobileFooterLabel}>Reach out</div>
+          <div className={s.mobileFooterText}>
+            <div>Made by Nazmul Hasan | @ 2026</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

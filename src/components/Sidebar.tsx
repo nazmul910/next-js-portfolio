@@ -298,9 +298,10 @@ export default function Sidebar(): React.ReactElement {
                   href={href}
                   className={`${s.navItem} ${pathname === href ? s.navItemActive : s.navItemInactive}`}
                   aria-current={pathname === href ? "page" : undefined}
-                />
+                >
                 <Icon className={s.navIcon} />
                 <span className={s.navLabel}>{label}</span>
+                </Link>
               </li>
             ))}
           </ul>

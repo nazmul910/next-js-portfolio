@@ -54,7 +54,7 @@ export default function HomePage(): React.ReactElement {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    aria-hidden
+                    aria-hidden={true}
                   >
                     <path d="M3 1219-9 9 9" strokeWidth="1.2" />
                   </svg>
@@ -65,7 +65,7 @@ export default function HomePage(): React.ReactElement {
 
                 </div>
 
-                <button type="button" aria-level="Follow on X" className={homePageStyles.calloutCard.button}>
+                <button type="button" aria-label="Follow on X" className={homePageStyles.calloutCard.button}>
                   Follow
                 </button>
 

@@ -1,6 +1,7 @@
 "use effect"
 
 import React,{useEffect,useState} from "react";
+import { TextHoverEffect } from "./ui/text-hover-effect";
 
 const formatTime =() => new Date().toLocaleTimeString();
 
@@ -26,6 +27,7 @@ export default function Footer() {
           <div className="text-lg cursor-pointer">
             Reach out
           </div>
+           <TextHoverEffect text="Nazmul" />
           <div className="text-lg">
             {timeNow}
           </div>

@@ -47,7 +47,12 @@ export default function HomePage(): React.ReactElement {
 
           <div className="mb-6">
             <div className={homePageStyles.calloutCard.wrapper}>
-              
+              <div className={homePageStyles.calloutCard.innerContainer}>
+                <div className={homePageStyles.calloutCard.textContainer}>
+
+                </div>
+
+              </div>
 
             </div>
 

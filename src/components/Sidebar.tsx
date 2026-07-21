@@ -4,6 +4,7 @@ import React, { useState, useEffect, SVGProps } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logo from "@/assets/Hexagon.png"
 
 import { sidebarStyles as s } from "../../public/dummyStyles";
 import { TypingAnimation } from "./ui/typing-animation";
@@ -237,7 +238,7 @@ export default function Sidebar(): React.ReactElement {
           <div className={s.mobileAvatarContainer}>
             <div className={s.mobileAvatar}>
               <Image
-                src="/hexagon.png"
+                src={logo}
                 alt="Nazmul hasan"
                 width={40}
                 height={40}
@@ -265,7 +266,7 @@ export default function Sidebar(): React.ReactElement {
         <div className={s.desktopAvatarContainer}>
           <div className={s.desktopAvatar}>
             <Image
-              src="/hexagon.png"
+              src={logo}
               alt="Nazmul hasan"
               width={48}
               height={48}
@@ -345,7 +346,7 @@ export default function Sidebar(): React.ReactElement {
             <div className={s.mobileAvatarContainer}>
               <div className={s.mobileAvatar}>
                 <Image
-                  src="/hexagon.png"
+                  src={logo}
                   alt="Nazmul hasan"
                   width={40}
                   height={40}

@@ -1,4 +1,4 @@
-"use effect"
+"use client"
 
 import React,{useEffect,useState} from "react";
 import { TextHoverEffect } from "./ui/text-hover-effect";

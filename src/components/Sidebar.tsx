@@ -429,6 +429,35 @@ export default function Sidebar(): React.ReactElement {
           </div>
         </div>
       </div>
+      <div className={s.bottomNav}>
+        <div className={s.bottomNavContainer}>
+          <div className={s.bottomNavInner}>
+            <div className={s.bottomNavBar}>
+              <div className={s.bottomNavGrid}>
+                {
+                  navItems.map(({href,label,Icon}) => (
+                  
+                  <Link key={href} href={href} className={`${s.bottomNavLink} ${pathname === href ? s.bottomNavLinkActive : s.bottomNavLinkInactive}`} aria-label={label} >
+                    <Icon className={s.bottomNavIcon} />
+
+                  </Link>))
+                }
+
+              </div>
+              <div className={s.bottomNavDivider}>
+
+              </div>
+              <button className={s.bottomMenuButton} onClick={()=> setIsMobileMenuOpen(true)} aria-label="Open Menu">
+                <MenuIcon className={s.bottomMenuIcon}/>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
     </>
   );
 }

@@ -65,6 +65,10 @@ export default function HomePage(): React.ReactElement {
 
                 </div>
 
+                <button type="button" aria-level="Follow on X" className={homePageStyles.calloutCard.button}>
+                  Follow
+                </button>
+
               </div>
 
             </div>

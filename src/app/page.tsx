@@ -44,6 +44,14 @@ export default function HomePage(): React.ReactElement {
             </span>
             {" "} Developer
           </h2>
+
+          <div className="mb-6">
+            <div className={homePageStyles.calloutCard.wrapper}>
+              
+
+            </div>
+
+          </div>
         </section>
       </div>
     </>

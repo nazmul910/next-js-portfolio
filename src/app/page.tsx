@@ -53,16 +53,17 @@ export default function HomePage(): React.ReactElement {
             <div className={homePageStyles.calloutCard.wrapper}>
               <div className={homePageStyles.calloutCard.innerContainer}>
                 <div className={homePageStyles.calloutCard.textContainer}>
-                  <svg
-                    className={homePageStyles.calloutCard.icon}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    aria-hidden={true}
-                  >
-                    <path d="M3 1219-9 9 9" strokeWidth="1.2" />
-                  </svg>
-                  <div className={homePageStyles.calloutCard.button}>
+                   <svg
+                      className={homePageStyles.calloutCard.icon}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path d="M3 12l9-9 9 9" strokeWidth="1.2" />
+                    </svg>
+
+                  <div className={homePageStyles.calloutCard.text}>
                     Connect with me on X
                   </div>
                 </div>

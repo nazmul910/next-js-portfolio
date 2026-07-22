@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import {projectStyles as s} from "../../../public/dummyStyles"
 
 import {projects,Project} from "@/lib/projects-data"
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
 
 
 export default function ProjectsPage() {
@@ -24,7 +25,15 @@ export default function ProjectsPage() {
           <div className={s.projectsGrid}>
             {
               projects.map((project) =>(
-                
+                <FollowerPointerCard
+                  key={project.slug}
+                  title={
+                    <TitleComponent
+                      title={project.author}
+                      avatar={project.authorAvatar}
+                    />
+                  }
+                />
               ))
             }
 

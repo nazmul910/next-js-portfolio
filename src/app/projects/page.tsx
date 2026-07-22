@@ -21,6 +21,14 @@ export default function ProjectsPage() {
             </p>
 
           </div>
+          <div className={s.projectsGrid}>
+            {
+              projects.map((project) =>(
+                
+              ))
+            }
+
+          </div>
 
         </div>
 

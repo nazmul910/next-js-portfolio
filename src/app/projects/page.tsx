@@ -71,7 +71,7 @@ function ProjectCard({project}:{project: Project}) {
     <>
       <div className={s.projectCard}
         onClick={() => {
-          router.push(`/project/${project.slug}`)
+          router.push(`/projects/${project.slug}`)
         }}>
 
           <div className={s.imageContainer}>

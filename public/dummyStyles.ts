@@ -232,7 +232,7 @@ export const aboutPageStyles = {
 export const contactPageStyles = {
   // Layout and container styles
   pageContainer: "flex min-h-screen pt-20 w-full items-start justify-center bg-zinc-950 px-6 py-12 md:px-12 md:py-20 lg:px-16",
-  contentContainer: "w-full max-w-2xl",
+  contentContainer: "w-full max-w-3xl",
 
   // Form container with boxes background
   formOuterContainer: "relative w-full overflow-hidden bg-zinc-950 flex flex-col items-center justify-center rounded-lg",

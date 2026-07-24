@@ -94,9 +94,10 @@ export default function Contact() {
                 href="mailto:nazmulhasan677441@gmail.com"
                 className={s.contactCard}
               >
-                <div className={s.contactIconContainer}>
+               <div className="hidden md:block">
+                 <div className={s.contactIconContainer}>
                   <svg
-                    className={s.contactIcon}
+                    className={s.contactIcon }
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -109,6 +110,7 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
+               </div>
                 <div>
                   <p className={s.contactLabel}>Email</p>
                   <p className={s.contactValue}>nazmulhasan677441@gmail.com</p>
@@ -121,7 +123,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className={s.contactCard}
               >
-                <div className={s.contactIconContainer}>
+                <div className="hidden md:block">
+                  <div className={s.contactIconContainer}>
                   <svg
                     className={s.contactIcon}
                     fill="currentColor"
@@ -129,6 +132,7 @@ export default function Contact() {
                   >
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
+                </div>
                 </div>
                 <div>
                   <p className={s.contactLabel}>Twitter</p>

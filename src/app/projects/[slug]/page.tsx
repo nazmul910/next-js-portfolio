@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {projectDetailStyles as s}  from "../../../../public/dummyStyles"
 import {getProjectBySlug,getAllProjectSlugs} from "@/lib/projects-data"
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Package, Phone, Share } from "lucide-react";
 
 
 interface ProjectPageProps{
@@ -131,9 +131,104 @@ export default async function ProjectPage({params}:ProjectPageProps) {
                                     Tech Stack
                                 </h3>
                                 <div className={s.techStackContainer}>
-                                    {project.techStack}
+                                    {project.techStack.map((tech) => (
+                                        <span key={tech} className={s.techStackItem}>
+                                            {tech}
+
+                                        </span>
+                                    ))}
                                 </div>
 
+                            </section>
+                            <section>
+                                 <h3 className={s.sidebarSectionTitle}>
+                                    Projects Links
+                                </h3>
+                                <div className={s.linksContainer}>
+                                    {
+                                        project.links.github && (
+                                            <a href={project.links.github} rel="noopener noreferrer" target="_blank" className={s.linkCard}>
+                                                <Share className={s.linkIcon} />
+                                                <span className={s.linkText}>View Sourch Code</span>
+                                                
+                                            </a>
+                                        )
+                                    }
+                                    {
+                                        project.links.visit && (
+                                            <a href={project.links.visit} rel="noopener noreferrer" target="_blank" className={s.linkCard}>
+                                                <ExternalLink className={s.linkIcon} />
+                                                <span className={s.linkText}>Live Demo</span>
+                                                
+                                            </a>
+                                        )
+                                    }
+                                    {
+                                        project.links.pypi && (
+                                            <a href={project.links.pypi} rel="noopener noreferrer" target="_blank" className={s.linkCard}>
+                                                <Package className={s.linkIcon} />
+                                                <span className={s.linkText}>Pypi Package</span>
+                                                
+                                            </a>
+                                        )
+                                    }
+                                     {
+                                        project.links.youtube && (
+                                            <a href={project.links.youtube} rel="noopener noreferrer" target="_blank" className={s.linkCard}>
+                                                <Share className={s.linkIcon} />
+                                                <span className={s.linkText}>Video Tutorial</span>
+                                                
+                                            </a>
+                                        )
+                                    }
+                                   
+                                   
+                                   
+                                </div>
+                            </section>
+
+                            <section className={s.sidebarSection}>
+                                <h3 className={s.sidebarSectionTitle}>
+                                    Project Info
+
+                                </h3>
+                                <div className={s.projectInfoContainer}>
+                                    <div>
+                                        <p className={s.projectInfoLabel}>
+                                            Author
+                                        </p>
+                                        <div className={s.authorContainer}>
+                                            <img 
+                                              src={project.authorAvatar}
+                                              alt={project.author}
+                                              className={s.authorAvatar}
+                                            >
+                                            </img>
+                                            <p className={s.authorName}>
+                                                {project.author}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className={s.projectInfoLabel}>
+                                            Status
+
+                                        </p>
+                                        <p className={s.projectInfoText}>
+                                            {project.status}
+                                        </p>
+                                    </div>
+                                     <div>
+                                        <p className={s.projectInfoLabel}>
+                                            Category
+
+                                        </p>
+                                        <p className={s.projectInfoText}>
+                                            {project.tags[0]}
+                                        </p>
+                                    </div>
+                                </div>
                             </section>
 
                         </div>

@@ -11,7 +11,7 @@ export const homePageStyles = {
     wrapper: "pointer-events-none -z-20 absolute inset-0 [background-size:40px_40px] select-none",
     pattern: "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
   },
-
+ 
   // Gradient overlay
   gradientOverlay: "absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60 pointer-events-none",
 

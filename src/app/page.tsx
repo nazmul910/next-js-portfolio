@@ -34,8 +34,9 @@ export default function HomePage(): React.ReactElement {
 
         <div className={homePageStyles.gradientOverlay} />
 
-        <section className=" relative">
-          <h1 className={homePageStyles.h1}>
+        <section className={homePageStyles.heroSection}>
+          <div className=" relative">
+            <h1 className={homePageStyles.h1}>
             Hey, I&apos;m{" "}
               <span className={homePageStyles.spanWithMargin}>
             <Cover>Nazmul</Cover>
@@ -153,7 +154,8 @@ export default function HomePage(): React.ReactElement {
                 </Link>
               </div>
             </div>
-          </article>
+          </article>          
+          </div>
         </section>
       </div>
     </>

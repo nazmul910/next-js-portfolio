@@ -4,7 +4,7 @@ import React, { useState, useEffect, SVGProps } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from "@/assets/Hexagon.png"
+import logo from "@/assets/logo.png"
 
 import { sidebarStyles as s } from "../../public/dummyStyles";
 import { TypingAnimation } from "./ui/typing-animation";
@@ -247,7 +247,7 @@ export default function Sidebar(): React.ReactElement {
               />
             </div>
             <div>
-              <div className={s.mobileName}>MD.Nazmul Hasan</div>
+              <div className={s.mobileName}>Nazmul</div>
               <TypingAnimation
                 className={s.mobileName}
                 words={[
@@ -275,6 +275,7 @@ export default function Sidebar(): React.ReactElement {
             />
           </div>
           <div className={s.desktopTyping}>
+            <div className={s.mobileName}>Md.Nazmul Hasan</div>
             <TypingAnimation
               className={s.desktopTyping}
               words={[
@@ -355,7 +356,7 @@ export default function Sidebar(): React.ReactElement {
                 />
               </div>
               <div>
-                <div className={s.mobileName}>Nazmul hasan</div>
+                <div className={s.mobileName}>Nazmul</div>
                 <TypingAnimation
                   className={s.mobileName}
                   words={[

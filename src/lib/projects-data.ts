@@ -61,7 +61,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/2Mrwszudm9M?si=n34faY8CSOuH6iAi",
     },
     author: "AI Invoice Generator",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
   {
     id: "2",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/lDg72UDAq60?si=keX7_pOq_QytNwO7",
     },
     author: "LMS Platform",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
   {
     id: "3",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/gWHgPP5ay7Q?si=FhtnDh4O7jm9rsEY",
     },
     author: "Resume Builder",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
   {
     id: "4",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/VAKDr1lsix0?si=FZvPZSo2qIOTjiJD",
     },
     author: "Task Manager",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
   {
     id: "5",
@@ -201,7 +201,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/6CL4f8fPk9w?si=eo8gxXCjMmd1xRUz",
     },
     author: "Food Delivery App",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
   {
     id: "6",
@@ -236,7 +236,7 @@ export const projects: Project[] = [
       howIBuilt: "https://youtu.be/KQ7srsb8cfc?si=3m4Uk4mvYGF25Ykf",
     },
     author: "Movie Ticket Booking",
-    authorAvatar: "/Hexagon.png",
+    authorAvatar: "/logo.png",
   },
 ];
 

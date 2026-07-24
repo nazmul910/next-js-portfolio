@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import fav from "../../public/favicon.png"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nazmul Portfolio",
   description: "Personal portfolio of Nazmul Hossain, a software engineer and web developer.",
+ icons: {
+  icon: "/favicon.png",
+}
 };
 
 export default function RootLayout({

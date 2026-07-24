@@ -8,87 +8,109 @@ import { Timeline } from "@/components/ui/timeline";
 export default function TimeLineDemo() {
   const data = [
     {
-      title: "2020 - Present",
+      title: "Sep 2025 - Present",
       content: (
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerBlue}>
-              <Rocket className={s.iconBlue} />
+              <Briefcase className={s.iconBlue} />
             </div>
+
             <div>
               <h3 className={s.contentTitle}>
-                Founding Engineer - Hexagon Digital Sercices
+                Full Stack Developer · Softvence
               </h3>
+
+              <p className={s.contentSubtitle}>Dhaka, Bangladesh • On-site</p>
+
               <p className={s.contentSubtitle}>
-                Buildin Copilot for Insurance Industry
+                Building production-grade Full Stack applications.
               </p>
-              <p className={s.contentSubtitle}>Seriec A startup - Remote</p>
             </div>
           </div>
+
           <ul className={s.list}>
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Leading UI/UX for Copilot to automate insurance workflow
+              Developing scalable MERN Stack applications for real-world
+              business solutions.
             </li>
+
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Build kay Admin App, Client App and Demo Instance
+              Collaborating directly with clients to gather requirements and
+              deliver production-ready features.
             </li>
+
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Expreimentitng with emerging AI models and UX paradigms
+              Responsible for end-to-end feature development, API integration,
+              testing, and deployment.
             </li>
           </ul>
+
           <div className={s.techBadgesContainer}>
-            <span className={s.techBadge}>React JS</span>
+            <span className={s.techBadge}>React.js</span>
+            <span className={s.techBadge}>Next.js</span>
+            <span className={s.techBadge}>NestJS</span>
             <span className={s.techBadge}>TypeScript</span>
-            <span className={s.techBadge}>Tailwind</span>
-            <span className={s.techBadge}>Next Js</span>
-            <span className={s.techBadge}>Javascript</span>
+            <span className={s.techBadge}>MongoDB</span>
+            <span className={s.techBadge}>PostgreSQL</span>
           </div>
         </div>
       ),
     },
+
     {
-      title: "2022 - 2023",
+      title: "May 2025 - Present",
       content: (
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerPurple}>
-              <Code2 className={s.iconPurple} />
+              <Rocket className={s.iconPurple} />
             </div>
+
             <div>
               <h3 className={s.contentTitle}>
-                Co-Founder / CTO · Hexagon Digital Services
+                Full Stack Developer · ReturnHex
               </h3>
+
+              <p className={s.contentSubtitle}>Remote • Product Development</p>
+
               <p className={s.contentSubtitle}>
-                Designed and developed LLMOps Platform
-              </p>
-              <p className={s.contentSubtitle}>
-                Pre-Seed Startup · 6 Team Members
+                Building SaaS platforms & modern business applications.
               </p>
             </div>
           </div>
+
           <ul className={s.list}>
             <li className={s.listItem}>
               <span className={s.bulletPurple}></span>
-              Leading UI/UX for Copilot to automate insurance workflow
+              Developed a Multi-Tenant SaaS E-Commerce Platform with tenant
+              isolation, JWT authentication, RBAC, and SSLCommerz integration.
             </li>
+
             <li className={s.listItem}>
-              <span className={s.bulletBlue}></span>
-              Build kay Admin App, Client App and Demo Instance
+              <span className={s.bulletPurple}></span>
+              Built a role-based Real Estate Platform with Admin, Agent, and
+              Client dashboards alongside Stripe payment integration.
             </li>
+
             <li className={s.listItem}>
-              <span className={s.bulletBlue}></span>
-              Expreimentitng with emerging AI models and UX paradigms
+              <span className={s.bulletPurple}></span>
+              Developed high-performance marketing websites using Next.js, GSAP,
+              Tailwind CSS, and modern frontend best practices.
             </li>
           </ul>
+
           <div className={s.techBadgesContainer}>
-            <span className={s.techBadge}>React JS</span>
-            <span className={s.techBadge}>TypeScript</span>
-            <span className={s.techBadge}>Tailwind</span>
-            <span className={s.techBadge}>Next Js</span>
-            <span className={s.techBadge}>Javascript</span>
+            <span className={s.techBadge}>Next.js</span>
+            <span className={s.techBadge}>React</span>
+            <span className={s.techBadge}>NestJS</span>
+            <span className={s.techBadge}>Prisma</span>
+            <span className={s.techBadge}>PostgreSQL</span>
+            <span className={s.techBadge}>Stripe</span>
+            <span className={s.techBadge}>JWT</span>
           </div>
         </div>
       ),
@@ -103,24 +125,25 @@ export default function TimeLineDemo() {
             <div className={s.timelineBadge}>
               <span className={s.timelineBadge}>Career Timeliner</span>
             </div>
-            <h1 className={s.mainTitle}>Changelog from my journey</h1>
+            <h1 className={s.mainTitle}>Career Timeline</h1>
             <p className={s.mainParagraph}>
-              I&apos;s a timeline of my journey across multiple startup and
-              projects
+              My professional journey as a Full Stack Developer, building
+              scalable SaaS platforms, business applications, and modern web
+              solutions.
             </p>
             <div className={s.legendContainer}>
               <div className={s.legendItem}>
                 <div className={`${s.legendDot} bg-blue-500`}></div>
-                <span className={s.legendText}>Current Role</span>
+                <span className={s.legendText}>Current Position</span>
               </div>
               <div className={s.legendItem}>
                 <div className={`${s.legendDot} bg-purple-500`}></div>
-                <span className={s.legendText}>Ai Startup</span>
+                <span className={s.legendText}>Professional Experience</span>
               </div>
-              <div className={s.legendItem}>
+              {/* <div className={s.legendItem}>
                 <div className={`${s.legendDot} bg-green-500`}></div>
                 <span className={s.legendText}>Growth Startup</span>
-              </div>
+              </div> */}
               <div className={s.legendItem}>
                 <div className={`${s.legendDot} bg-amber-500`}></div>
                 <span className={s.legendText}>Early career</span>
@@ -156,7 +179,7 @@ export default function TimeLineDemo() {
                 <div className={s.techCardContent}>
                   Node.js, Express.js, Nest.js
                 </div>
-              </div>  
+              </div>
               <div className={s.techCard}>
                 <div className={`${s.techCardTitle} ${s.textRose}`}>
                   Databases
@@ -164,15 +187,13 @@ export default function TimeLineDemo() {
                 <div className={s.techCardContent}>
                   MongoDB, PostgreSQL, MySQL
                 </div>
-              </div>                          
+              </div>
               <div className={s.techCard}>
-                <div className={`${s.techCardTitle} ${s.textCyan}`}>
-                  Tools
-                </div>
+                <div className={`${s.techCardTitle} ${s.textCyan}`}>Tools</div>
                 <div className={s.techCardContent}>
-                  Git, Github, Vercel, Render, Postmen, 
+                  Git, Github, Vercel, Render, Postmen,
                 </div>
-              </div>              
+              </div>
             </div>
           </div>
         </div>

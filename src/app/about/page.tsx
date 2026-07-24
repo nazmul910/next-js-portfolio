@@ -4,40 +4,44 @@ import Link from "next/link";
 
 const interests = [
   "FULL-STACK DEV",
-  "AI ENGINEER",
-  "LLMS",
-  "TRAVEL",
-  "MUSIC",
-  "F1",
-  "READING",
+  "OPEN SOURCE",
+  "SAAS",
+  "SYSTEM DESIGN",
+  "PROBLEM SOLVING",
+  "FOOTBALL",
+  "LEARNING",
 ];
 
 const techStack = [
-  "React",
-  "LLM",
-  "Rails",
   "Next.js",
+  "React",
+  "NestJS",
   "TypeScript",
-  "Postgres",
-  "Redis",
+  "MongoDB",
+  "PostgreSQL",
+  "Prisma",
 ];
 
 const email = "nazmulhasan677441@gmail.com";
 
-const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  email
+)}`;
 
 export default function About() {
   return (
-    <>
-      <div className={s.pageContainer}>
-        <div className={s.contentContainer}>
-          <div className={s.backgroundContainer}>
-            <div className={s.backgroundEffect}>
-              <BackgroundBeamsWithCollision />
-            </div>
-            <div className={s.contentWrapper}>
-                <h1 className={s.mainHeading}>Nazmul</h1>
-                            <div className={s.interestsContainer}>
+    <div className={s.pageContainer}>
+      <div className={s.contentContainer}>
+        <div className={s.backgroundContainer}>
+          <div className={s.backgroundEffect}>
+            <BackgroundBeamsWithCollision />
+          </div>
+
+          <div className={s.contentWrapper}>
+            {/* Hero */}
+            <h1 className={s.mainHeading}>MD. Nazmul Hasan</h1>
+
+            <div className={s.interestsContainer}>
               {interests.map((interest, idx) => (
                 <span key={interest} className={s.interestItem}>
                   {interest}
@@ -47,6 +51,7 @@ export default function About() {
                 </span>
               ))}
             </div>
+
             <div className={s.techStackContainer}>
               {techStack.map((tech) => (
                 <span key={tech} className={s.techPill}>
@@ -54,71 +59,87 @@ export default function About() {
                 </span>
               ))}
             </div>
+
+            {/* Content */}
             <div className={s.sectionsContainer}>
               {/* Who I Am */}
               <section>
                 <h2 className={s.sectionHeading}>Who I Am</h2>
+
                 <p className={s.paragraph}>
-                  Hello! I&apos;m Virat, a Bengaluru-based engineer passionate
-                  about building tools that simplify people&apos;s lives.
-                  I&apos;ve been coding since 2018, writing about AI, LLMs,
-                  frontend, backend, Rails and databases.
+                  Hello! I'm <strong>MD. Nazmul Hasan</strong>, a passionate Full
+                  Stack Developer from Bangladesh specializing in React.js,
+                  Next.js, NestJS, TypeScript, and modern JavaScript
+                  technologies. I enjoy transforming complex business ideas into
+                  scalable, secure, and user-friendly web applications with
+                  clean architecture and excellent user experiences.
                 </p>
               </section>
 
               {/* What I Do */}
               <section>
                 <h2 className={s.sectionHeading}>What I Do</h2>
+
                 <p className={s.paragraph}>
-                  Currently a Founding Engineer at{" "}
-                  <a
-                    href="https://hexagondigitalservices.com"
-                    className={s.contentLink}
-                  >
-                    Hexagon Digital Services
-                  </a>
-                  , building workflow automation for insurance brokers. I focus
-                  on building practical, user-facing products - less demo
-                  energy, more things people actually use daily.
+                  Currently working as a <strong>Full Stack Developer</strong>,
+                  building production-ready SaaS platforms, multi-tenant
+                  applications, e-commerce systems, and business automation
+                  tools. I collaborate directly with clients, gather
+                  requirements, design REST APIs, develop responsive frontends,
+                  and deploy complete solutions from idea to production.
                 </p>
               </section>
 
               {/* My Journey */}
               <section>
                 <h2 className={s.sectionHeading}>My Journey</h2>
+
                 <p className={s.paragraph}>
-                  Co-founder of Hexagon Digital Services, Engagebud and
-                  Influencerbit — led product development and design across
-                  multiple startups. Recently shipped AI Invoive Generator (100+
-                  daily users), an WEB AI TOOL, and several micro-builds,
-                  keeping the shipping momentum going.
+                  My development journey began with frontend technologies and
+                  gradually expanded into full-stack engineering. Over the past
+                  years I've worked on Lawyer Management Systems, Doctor
+                  Appointment Platforms, Multi-Tenant SaaS Applications,
+                  E-Commerce Platforms, and business dashboards using React,
+                  Next.js, NestJS, MongoDB, PostgreSQL, Prisma ORM, and modern
+                  development practices. Every project has strengthened my
+                  problem-solving skills and software architecture knowledge.
                 </p>
               </section>
 
               {/* Vision */}
               <section>
                 <h2 className={s.sectionHeading}>Vision</h2>
+
                 <p className={s.paragraph}>
-                  LLMs and AI will automate the mundane and reshape how we work.
-                  I strive to stay at the forefront of this transformation.
+                  My goal is to become a world-class Software Engineer by
+                  continuously learning modern technologies, contributing to
+                  impactful products, and building software that solves
+                  real-world problems. I believe clean code, scalable
+                  architecture, and continuous learning are the foundations of
+                  long-term success.
                 </p>
               </section>
 
               {/* Beyond Code */}
               <section>
                 <h2 className={s.sectionHeading}>Beyond Code</h2>
+
                 <p className={s.paragraph}>
-                  Love techno & house music, follow F1 (Max), play chess, and
-                  read regularly. Travelled recently to Bali, and a month in
-                  Thailand/Vietnam in 2025.
+                  Beyond programming, I enjoy playing football, exploring new
+                  technologies, contributing to personal projects, reading
+                  technical articles, and continuously improving my skills. I
+                  love turning ideas into real products and challenging myself
+                  with new technologies and development approaches.
                 </p>
               </section>
             </div>
+
+            {/* CTA */}
             <div className={s.ctaContainer}>
               <Link
                 href="/contact"
                 className={s.primaryButton}
-                aria-label="Get in touch — open contact page"
+                aria-label="Get in touch"
               >
                 Get in Touch
               </Link>
@@ -128,7 +149,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={s.secondaryButton}
-                aria-label={`Compose email to ${email} in Gmail`}
+                aria-label={`Compose email to ${email}`}
               >
                 <svg
                   className={s.emailIcon}
@@ -146,11 +167,9 @@ export default function About() {
                 E-Mail
               </a>
             </div>
-
-            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

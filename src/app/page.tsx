@@ -65,17 +65,19 @@ export default function HomePage(): React.ReactElement {
                     </svg>
 
                     <div className={homePageStyles.calloutCard.text}>
-                      Connect with me on X
+                      Connect with me on LinkedIn
                     </div>
                   </div>
 
-                  <button
+                  <a
+                    href="https://www.linkedin.com/in/ni-nazmul4124/"
+                    target="_blank"
                     type="button"
                     aria-label="Follow on X"
                     className={homePageStyles.calloutCard.button}
                   >
                     Follow
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

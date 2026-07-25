@@ -25,7 +25,8 @@ const TitleComponent = ({
 export default function ProjectsPage() {
   return (
     <>
-      <div className={s.pageContainer}>
+      <div className=" overflow-x-hidden">
+        <div className={s.pageContainer}>
         <div className={s.innerContainer}>
           <div className={s.header}>
             <h1 className={s.pageTitle}>
@@ -58,6 +59,7 @@ export default function ProjectsPage() {
 
         </div>
 
+      </div>
       </div>
     </>
   );

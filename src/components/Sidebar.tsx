@@ -247,14 +247,14 @@ export default function Sidebar(): React.ReactElement {
               <Image
                 src={logo}
                 alt="Nazmul hasan"
-                width={40}
-                height={40}
+                width={25}
+                height={25}
                 className={s.mobileAvatarImage}
                 priority
               />
             </div>
             <div>
-              <div className={s.mobileName}>Nazmul</div>
+              <div className={s.mobileName}>MD.Nazmul Hasan</div>
               <TypingAnimation
                 className={s.mobileName}
                 words={[
@@ -275,8 +275,8 @@ export default function Sidebar(): React.ReactElement {
             <Image
               src={logo}
               alt="Nazmul hasan"
-              width={48}
-              height={48}
+              width={40}
+              height={40}
               className={s.desktopAvatarImage}
               priority
             />

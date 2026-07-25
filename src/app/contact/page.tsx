@@ -19,7 +19,7 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
-    const publicKey = "Lb2fYYsYp8OBDAKV6";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
     if (publicKey) emailjs.init(publicKey);
   }, []);
 
@@ -34,8 +34,8 @@ export default function Contact() {
       message: formData.message,
     };
 
-    const serviceId = "service_parlqu7";
-    const templateId = "template_l2mv946";
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
     try {
       if (!serviceId || !templateId) {
@@ -223,7 +223,8 @@ export default function Contact() {
                   type="submit"
                   className={s.submitButton}
                   disabled={sending}
-                  aria-label={sending}
+                  aria-label={sending ? "Sending message" : "Send message"}
+                  aria-busy={sending}
                 >
                   <span className={s.submitButtonText}>
                     {sending ? "Sending..." : "Send Message"}
